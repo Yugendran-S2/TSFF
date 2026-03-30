@@ -1,0 +1,66 @@
+POST
+/api/v1/auth/login
+Login
+
+
+Authenticate using email and password. Returns a JWT token valid for 24 hours. Send this token in all subsequent requests as: Authorization: Bearer . Works for all roles: CITIZEN, SERVICE_OFFICER, DEPARTMENT_HEAD, CITY_ADMINISTRATOR, COMPLIANCE_OFFICER.
+
+Parameters
+Cancel
+Reset
+No parameters
+
+Request body
+
+application/json
+{ 
+
+  "email": "admin@civicconnect.com", 
+
+  "password": "Admin@123" 
+
+} 
+Execute
+Clear
+Responses
+Curl
+
+curl -X 'POST' \
+  'http://localhost:8081/api/v1/auth/login' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{ 
+
+  "email": "admin@civicconnect.com", 
+
+  "password": "Admin@123" 
+
+} '
+Request URL
+http://localhost:8081/api/v1/auth/login
+Server response
+Code	Details
+500
+Undocumented
+Error: response status is 500
+
+Response body
+Download
+{
+  "status": 500,
+  "message": "An unexpected internal error occurred. Please try again later.",
+  "path": "/api/v1/auth/login",
+  "timestamp": "2026-03-30T09:49:25.2993682"
+}
+Response headers
+ cache-control: no-cache,no-store,max-age=0,must-revalidate 
+ connection: close 
+ content-type: application/json 
+ date: Mon,30 Mar 2026 04:19:25 GMT 
+ expires: 0 
+ pragma: no-cache 
+ transfer-encoding: chunked 
+ vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers 
+ x-content-type-options: nosniff 
+ x-frame-options: DENY 
+ x-xss-protection: 0 
